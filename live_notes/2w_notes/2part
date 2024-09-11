@@ -1,0 +1,80 @@
+--topics--
+Classes in JS- building them
+Built-in Classes in JS (date,map)
+Built-in Class Promise ,Promise over callback , Call back hell
+Promise Chaining
+Async ; await
+---------------------------------------------------------
+1.) class keyword is used to declare class
+    allows use of constructor keyword 
+    constructor allows for the use of "this" keyword
+    use it to define parameters of a class
+    and u can have function that use these parameters
+        :syntax for class
+            class Rectangle{
+                constructor(a,b,c){
+                    this.width = a;
+                    this.height= b;
+                    this.color = c;
+                }
+                area(){
+                    const area = this.width*this.height;
+                    return area;
+                }
+                getcolor(){
+                    return "the color is "+this.color
+                }
+            const screen = new Rectangle(2560,1440,pixel)
+            const estate = screen.area();
+---------------------------------------------------------------
+2.) common JS built-in classes
+    a.Date Class it gets us the date.
+        :syntax
+            const ab = new Date();
+    b.Map Class is from c++ help us set key value pair
+        :syntax
+            const map = new Map();
+            map.set('name':'Alice');
+            console.log(map.get('name'));
+-----------------------------------------------------------------
+3.) Promises
+    It is a syntax based approach to wrap async code in a wrapper
+    that returns if the async code was fullfiled(promise fulfiled)
+    or it is being awaited or it was'nt met.
+    It's used to avoid callback hell ,a pyramid of nested code that callbacks in each line.
+    :syntax 
+        setTimeoutPromisfied(ms){
+            return new Promise((resolve) => setTimeout(resolve,ms)}
+        setTimeoutPromisfied(3000).then(console.log("strings")
+    :syntax with catch method on promise object
+        readfunction("maps.js","utf-8"){
+            return new Promise((resolve,reject)=>fs.readFile('maps.js','utf-8'(err,data=>{if(err){reject(err)}else{resolve(data)}}))
+        readfunction('maps.js','utf-8').then(data=>console.log(data)).catch(err=>console.error(err))
+
+catch error will function when system does not get file otherwise it will simply execute then method
+------------------------------------------------------------------
+4.) Promise Chaining
+    setTimeoutPromisfied can be chained with more promises passed in then method
+    which can be a promise in themselves , this helps avoid nesting
+
+    :syntax
+        setTimeoutPromisfied(1000).then(()=>{console.log('hey');
+        return setTimeoutPromisfied(1000).then(()=>{console.log("hey again");
+        return setTimeoutPromisfied(1000).then(()=>{console.log("hey yet again");
+        })})})
+    
+    this code is a single line and has multiple promise chain since each executes an arrow function which returns a promise on which another .then can be called
+---------------------------------------------------------------------
+5.) Async/ await
+    This is a syntax wraper over Promise chaining to make it look better 
+
+    :syntax
+        async function new(){
+        await setTimeoutPromisfied(1000);
+        console.log('hi');
+        await setTimeoutPromisfied(1000);
+        console.log('hey again');
+        await setTimeoutPromisfied(1000);
+        console.log('hey yet again');
+        }
+        new();

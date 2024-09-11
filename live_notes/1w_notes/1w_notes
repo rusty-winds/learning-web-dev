@@ -1,0 +1,36 @@
+css attributes for start
+    1.color - adds color
+    2.backgorund - adds color to the div of tag
+    3.border-radius - gives the edges a border that is rounded off
+    4.border - line encompassing a dive for x pixel and solid/dotted style and black color "border: 1px solid black;"
+    5.padding & Margin - Padding is between content and div and Margin is outsied div "padding: 4px 4px"makes vertical and horizontal 4px each side; margin : auto auto ; auto means automatically center only for margin more options are padding-top, padding-bottom-margin-right margin-left to set indivisual side.
+    6.box-shadow- first px is direction of the shadow - goes toward left.. 2nd px-how far is the shadow projected ..3rd how big shadow is.
+<h1 style="color: red; background:aqua ; border-radius: 10px; border: 1px solid black;margin : 8px; padding : 10px; box-shadow: 2px 10px 10px black> only border or box-shadow can be there
+
+flexbox example <p style='display: flex; justify-content:flex-start,flex-end,center,space-between,space-around,space-evenly>
+style = " cursor: pointer;" hovering over content changes mouse to a pointer hand
+font weight: 400 " changes the boldness of the fonts 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//for loops in js
+let users = ["paritosh","sharma","i","me","myself"];
+let counterr= users.length;
+for (let i=0;i<counterr;i++){
+    console.log(users[i]);
+}//in line 4 i=0 is initiated, then i<counterr is checked if true, code runs and then i++ happens
+function greet(user){
+    console.log('Hi '+sal+' '+user.name+' your age is ' +user.age+' '+canVote);
+}
+let user={
+name:'paritosh',
+age:26,
+gender:'male'
+}
+if(user.gender=='male'){
+ sal='Mr';
+}else if (user.gender=="female"){
+ sal='Ms';
+}else{ sal='Pr';}
+if(user.age>18){
+  canVote='and you can vote';}
+else{canVote='and you cannot vote';}
+greet(user);

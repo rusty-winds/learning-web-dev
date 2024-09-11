@@ -1,0 +1,22 @@
+Fetching Elements
+Document.querySelector('div');
+Document.querySelectorAll('h1')[2];- select all with the query ie tag creating an array from which you select the item number
+getElementById('#Id')
+getElementByClassName('.div')
+=====================================
+Adding element
+const newAdd = document.createElement('div');
+const theList = document.querySelector('li'); - select the li tag in the dom
+theList.appendChild(newAdd);
+=====================================
+
+Updating Elements
+const newAdd = document.createElement('div');
+newAdd.innerHTML = "new list item";
+========================================
+
+Deleting Element
+
+const newDelete = document.getElementByClassName('.div');
+newDelete.parentNode.removeChild(newDelete);
+

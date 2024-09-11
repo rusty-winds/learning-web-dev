@@ -1,0 +1,23 @@
+10.08.2024 saturday
+Synchronous code - code executes line by line in the order writter
+IO operations work outside js context and memory and hence take a lot of time and are uncertain to be executed.
+Synchronous , Asynchronous , Concurrent  ... are 3 types of code
+js code by default runs on single thread
+Asynchronous code make working with IO commands better as the thread can work on other things rather than waiting on IO command to finish.
+Compute heavy task take full time as the single thread is busy solving them before moving on.
+JS can have functions as argument for other functions.
+http://latentflip.com/loupe
+
+fs.readFile('a.txt','utf-8',print) this is an async function here 3rd argument calls to an print function which needs to be in a format of following
+function print(err,data){  //here err nedds to be first and second is where data would be stored on executing fs.readFile object 
+ console.log(data);
+}  // in this function we can define whatever we want to with the read data when the task finished we can pass a function in the function which uses data
+
+Assignment for the class 
+            try promisified of 
+                set timeout
+                fetch
+                fs.read
+-----------------------------------------------------------------------------------------------------
+11.08.2024 Sunday session
+
