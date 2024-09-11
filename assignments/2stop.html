@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <div class='stopwatch'>
+  </div>
+    <button onclick = 'start()'>start</button>  
+    <button onclick = 'stop()'>stop</button>
+</body>
+<script>
+  let counter = 1;
+  let stopcounter = 0;
+  function stop(){
+    stopcounter = 1;
+  }
+  function stopper(){
+    return stopcounter === 1;
+  }
+  function sleep(ms){
+    return new Promise(r=>setTimeout(r,1000));
+  }
+  async function start(){
+      stopcounter =0;
+      while(!stopper()){
+        await sleep(1000);
+        render();
+        counter ++ ;
+      }
+  }
+  
+  function render(){
+    const sw = document.createElement('div');
+    sw.innerHTML = counter;
+    const thediv = document.querySelector('.stopwatch');
+    thediv.innerHTML = '';
+    thediv.appendChild(sw);
+  }
+</script>
+</html>
